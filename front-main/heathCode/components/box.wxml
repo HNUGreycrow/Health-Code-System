@@ -1,0 +1,21 @@
+<view class="module">
+    <!-- 核酸检测记录 -->
+
+    <view class="module-tittle">
+      核酸检测记录
+    </view>
+    <view class="module-content" wx:if="{{!created_at}}">
+     未查询到核酸记录
+    </view>
+    <view class="module-content" wx:if="{{resulttext}}">
+      核酸检测结果：
+      <text class="{{resultcolor}}">{{resulttext}}</text>
+    </view>
+    <view class="module-content" wx:if="{{testing_organization}}">
+      核酸检测机构： {{testing_organization}}
+    </view>
+    <view class="module-content" wx:if="{{created_at}}">
+      核酸采样时间： {{created_at}}
+    </view>
+    <view class="green info" wx:if="{{created_at}}" bind:tap="goto" data-page="detect"> > 详细</view>
+  </view>

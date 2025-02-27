@@ -1,0 +1,23 @@
+<view class="container">
+  <!-- 标题 -->
+  <view class="page-title">
+    <text>我的疑问</text>
+  </view>
+
+  <!-- 问题描述 -->
+  <view class="question-section">
+    <textarea class="question-input" placeholder="请描述您的问题" bindinput="onQuestionInput" />
+		<view class="image-section">
+		  <view class="image-preview">
+		    <image class="image-item" src="{{imageList[0] || '/images/addpic.png'}}" bindtap="chooseImage" data-index="0" />
+		    <image class="image-item" src="{{imageList[1] || '/images/addpic.png'}}" bindtap="chooseImage" data-index="1" />
+		  </view>
+		</view>
+  </view>
+
+  <!-- 图片选择 -->
+  
+
+  <!-- 提交按钮 -->
+  <button class="submit-btn" bindtap="submitFeedback">提交反馈</button>
+</view>

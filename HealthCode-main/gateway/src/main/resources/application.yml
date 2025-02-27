@@ -1,0 +1,53 @@
+# 服务器相关配置
+server:
+  # 指定当前服务运行的端口号为 8080
+  port: 8090
+
+# Spring 应用相关配置
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: public
+    gateway:
+      routes:
+        - id: health-code
+          uri: lb://health-code
+          predicates:
+            - Path=/health-code/**
+        - id: itinerary-code
+          uri: lb://itinerary-code
+          predicates:
+            - Path=/itinerary-code/**
+        - id: place-code
+          uri: lb://place-code
+          predicates:
+            - Path=/place-code/**
+        - id: nucleic-acids
+          uri: lb://nucleic-acids
+          predicates:
+            - Path=/nucleic-acids/**
+        - id: user
+          uri: lb://user
+          predicates:
+            - Path=/user/**
+        - id: vaccine-inoculation
+          uri: lb://vaccine-inoculation
+          predicates:
+            - Path=/vaccine-inoculation/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+              - PATCH
+            allowedHeaders: "*"
+            allowCredentials: true

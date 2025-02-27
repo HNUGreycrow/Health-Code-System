@@ -1,0 +1,12 @@
+<view class="container">
+	<view class="image">
+		<image class="login-image" src="/images/login.png" mode=""></image>
+	</view>
+	<view class="button" bindtap="login">微信授权登录</view>
+	<view class="user-agreement">
+		<text class="normal">我已阅读并同意</text>
+		<text class="blue">《用户协议》</text>
+		<text class="normal">和</text>
+		<text class="blue">《隐私协议》</text>
+	</view>
+</view>

@@ -1,0 +1,133 @@
+/* pages/code/code.wxss */
+.bg{
+  background-color: rgba(71, 111, 222, 1);
+  /* height: 100vh; */
+  min-height: 100vh;
+  padding: 12px;
+  padding-bottom: 24px;
+}
+.card{
+  background-color: #fff;
+  /* height: calc(100vh - 30px); */
+  border-radius: 20px;
+  overflow: hidden;
+}
+.tittle {
+  background-color: #F5F5F5;
+  height: 55px;
+  line-height: 55px;
+  padding: 0 30px;
+  display: flex; /* 使用 Flexbox 布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: space-between; /* 左右分布 */
+}
+
+.left-container {
+  display: flex; /* 使用 Flexbox 布局 */
+  align-items: center; /* 垂直居中 */
+}
+
+.tittle .name {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: rgba(51, 51, 51, 1);
+}
+
+.tittle .hide {
+  width: 20px; /* 设置 hide 图像的宽度 */
+  height: 20px; /* 设置 hide 图像的高度 */
+  margin-left: 20px; /* 与 name 保持 20px 的距离 */
+}
+
+.tittle .home {
+  width: 30px; /* 设置 home 图像的宽度 */
+  height: 30px; /* 设置 home 图像的高度 */
+}
+/* .jkcode.yellow{
+  background-color: #FFD700;
+}
+.jkcode.red{
+  background-color: #f60909;
+}
+.jkcode.green{
+  background-color: #1b824d;
+} */
+.jkcode {
+  width: 100%;
+  max-width: 400px;
+  min-width: 225px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.jkcode .qrcode {
+  width: 220px;
+  height: 220px;
+  z-index: 333;
+  background-color: #fff;
+  margin: 10px;
+}
+
+.jkcode .code {
+  width: 220px;
+  height: 220px;
+  vertical-align: top;
+	
+}
+
+.jkcode .refresh {
+  width: 16px;
+  height: 16px;
+  /* vertical-align: sub; */
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+}
+
+
+.module{
+  border-radius: 5px;
+  background: #FFFFFF;
+  margin: 24px;
+  box-shadow:0px 8px 24px rgba(149,157,165,0.2);
+  padding: 12px 27px;
+  position: relative;
+}
+.module-tittle{
+  /** 文本1 */
+font-size: 16px;
+font-weight: 400;
+letter-spacing: 0px;
+line-height: 32px;
+/* margin: 12px 0; */
+vertical-align: top;
+color: rgba(51, 51, 51, 1);
+}
+.module-content{
+  /** 文本1 */
+font-size: 13px;
+font-weight: 400;
+letter-spacing: 0px;
+line-height: 18px;
+color: rgba(99, 99, 99, 1);
+}
+
+.module .info{
+  right: 10px;
+  bottom: 10px;
+  height: 17px;
+  /** 文本1 */
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16.46px;
+  color: rgba(84, 179, 122, 1);
+  text-align: left;
+  vertical-align: top;
+  position: absolute;
+}

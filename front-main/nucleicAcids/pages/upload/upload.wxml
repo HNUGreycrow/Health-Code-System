@@ -1,0 +1,36 @@
+<!--pages/upload/upload.wxml-->
+<view class="module">
+  <view class="box" bind:tap="clicktube" wx:if="{{!tubeid}}">
+    <image src="/images/tubeicon.png" mode="" />
+    <text>扫描试管</text>
+  </view>
+
+  <view wx:if="{{tubeid}}" class="form">
+    <view class="kind">{{tubeid}}</view>
+
+
+    <view class="page-section">
+      <view class="weui-cells__title">检测结果：</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <picker class="P-picker" bindchange="bindKeySelect" range="{{arr}}" data-index="area">
+            <view class="picker">
+              {{arr[index] ||'请选择'}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">检测机构：</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" placeholder-class="placeholder"  bindinput="bindKeyInput" auto-focus placeholder="请输入" data-index="name" />
+        </view>
+      </view>
+    </view>
+    <view class="button" bind:tap="submit">
+      提交
+    </view>
+  </view>
+</view>

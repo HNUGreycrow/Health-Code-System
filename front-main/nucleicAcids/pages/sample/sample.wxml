@@ -1,0 +1,19 @@
+<!--pages/sample/sample.wxml-->
+<view class="module">
+
+<view class="box" bind:tap="clicktube" wx:if="{{!tubeid}}">
+<image src="/images/tubeicon.png" mode=""/>
+  <text >扫描试管</text>
+</view>
+<view wx:if="{{tubeid}}">
+<view class="kind">{{tubeid}}</view>
+<view class="now">容量：{{now+'/'+total}}</view>
+<view class="box" bind:tap="clickqr" >
+<image src="/images/codeicon.png" mode=""/>
+  <text>扫描健康码</text>
+</view>
+<view class="box" bind:tap="clickid" >
+<image src="/images/idicon.png" class="id" mode="" />
+  <text>输入身份证号</text>
+</view></view>
+</view>

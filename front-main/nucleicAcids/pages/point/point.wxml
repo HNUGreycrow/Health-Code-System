@@ -1,0 +1,92 @@
+<view class="page-body">
+  <view class="module">
+
+    <!-- 名称 -->
+    <view class="page-section">
+      <view class="weui-cells__title">名称</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindinput="bindKeyInput" placeholder="请输入名称" data-index="name" />
+        </view>
+      </view>
+    </view>
+
+    <!-- 所在区 -->
+    <view class="page-section">
+      <view class="weui-cells__title">所在区</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <picker class="P-picker" bindchange="bindKeyInput" value="{{area.index}}" range="{{area.arr}}" data-index="area">
+            <view class="picker">
+              {{area.arr[area.index]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <!-- 所在街道 -->
+    <view class="page-section">
+      <view class="weui-cells__title">所在街道</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <picker class="P-picker" bindchange="bindKeyInput" value="{{street.index}}" range="{{street.arr}}" data-index="street">
+            <view class="picker">
+              {{street.arr[street.index]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <!-- 所在社区 -->
+    <view class="page-section">
+      <view class="weui-cells__title">所在社区</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <picker class="P-picker" bindchange="bindKeyInput" value="{{village.index}}" range="{{village.arr}}" data-index="village">
+            <view class="picker">
+              {{village.arr[village.index]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <!-- 具体地址 -->
+    <view class="page-section">
+      <view class="weui-cells__title">具体地址</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindinput="bindKeyInput" data-index="address" placeholder="请输入具体地址" />
+        </view>
+      </view>
+    </view>
+
+    <!-- 检测时间 -->
+    <view class="page-section">
+      <view class="weui-cells__title">检测时间</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindinput="bindKeyInput" data-index="time" placeholder="请输入检测时间" />
+        </view>
+      </view>
+    </view>
+
+    <!-- 联系方式 -->
+    <view class="page-section">
+      <view class="weui-cells__title">联系方式</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindinput="bindKeyInput" data-index="contact" placeholder="请输入联系方式" />
+        </view>
+      </view>
+    </view>
+
+    <!-- 提交按钮 -->
+    <view class="button" bindtap="submit">
+      添加
+    </view>
+
+  </view>
+</view>

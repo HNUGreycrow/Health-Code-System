@@ -1,0 +1,41 @@
+{
+  "pages": [
+		"pages/index/index",
+		"pages/sample/sample",
+    "pages/logs/logs",
+    "pages/upload/upload",
+    "pages/point/point"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "custom": false,
+    "selected": 0,
+    "color": "#383838",
+    "selectedColor": "#476FDE",
+    "list": [{
+      "pagePath": "pages/sample/sample",
+      "text": "采样",
+      "iconPath": "/images/sample.png",
+      "selectedIconPath": "/images/sample-active.png"
+    },{
+      "pagePath": "pages/upload/upload",
+      "text": "录入",
+      "iconPath": "/images/upload.png",
+      "selectedIconPath": "/images/upload-active.png"
+    },{
+      "pagePath": "pages/point/point",
+      "text": "检测点",
+      "iconPath": "/images/point.png",
+      "selectedIconPath": "/images/point-active.png"
+      
+    }]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

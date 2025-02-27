@@ -1,0 +1,30 @@
+<view class="bg">
+<view class="card">
+  <view class="tittle">
+    <view class="left-container">
+      <text class="name">{{name}}</text>
+      <image class="hide" src="/images/hide.png"></image>
+    </view>
+    <image class="home" src="/images/home.png"></image>
+  </view>
+  <!-- 健康码二维码 -->
+  <view class="[{{statuscolor}},'jkcode']"  >
+    <canvas canvas-id="qrcode" class="qrcode"/>
+    <!-- <image class="code" src="/images/code0.png" mode="aspectFit"/> -->
+    <image class="refresh" src="/images/refresh.jpg" bindtap="refresh" mode=""/>
+  </view>
+  <!-- 组件：核酸检测记录 -->
+  <box testing_organization="{{testing_organization}}" resulttext="{{resulttext}}" created_at="{{created_at}}"></box>
+  <!-- 疫苗接种记录 -->
+  <view class="module" bind:tap="unfinished">
+    <view class="module-tittle">
+      疫苗接种记录
+    </view>
+  </view>
+  <!-- 组件：其他功能导航栏 -->
+  <nav></nav>
+
+</view>
+
+</view>
+

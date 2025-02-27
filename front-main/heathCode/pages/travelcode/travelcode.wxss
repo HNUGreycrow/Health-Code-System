@@ -1,0 +1,70 @@
+.pass{
+  background-color: #2BA667;
+}
+.wrapper{
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+.img image{
+  width: 200px;
+  height: 180px;
+  margin-top: 20px;
+}
+.tittle{
+  color: #fff;
+  font-size: 36px;
+  margin-top: 24px;
+}
+.msg{
+  color: #fff;
+  margin: 12px;
+}
+.card{
+  background-color: #fff;
+  width: 90%;
+  height: 380px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow:0px 8px 24px rgba(255,255,255,0.7);
+  position: relative;
+  overflow: hidden;
+}
+.line-top{
+  background-color: rgb(217,235,225);
+  height: 20px;
+}
+.line-bottom{
+  background-color: rgb(217,235,225);
+  height: 12px;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 0 0 30px 30px;
+}
+.line-text{
+  color: #2BA667;
+  position: absolute;
+  font-size: small;
+  top: 8px;
+  width: 100%;
+  text-align: center;
+}
+.img{
+  height: 220px;
+  width: 80%;
+  margin:0 auto;
+  border-bottom: 1px solid #ccc;
+}
+.id{
+  margin-top: 16px;
+  font-size: larger;
+}
+.time{
+  color: #aaa;
+  font-size: large;
+  margin-top: 8px;
+}
+.city{
+  color: #aaa;
+  line-height: 40px;
+}

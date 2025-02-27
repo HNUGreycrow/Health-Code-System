@@ -1,0 +1,44 @@
+server:
+  port: 8093
+
+spring:
+  application:
+    name: nucleic-acids
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    url: jdbc:mysql://8.138.5.230:3306/health_code_nucleic_acids?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: healthcode
+    password: healthcode
+  redis:
+    host: 8.138.5.230
+    port: 6379
+    password: 344056
+  cache:
+    type: redis
+  kafka:
+    bootstrap-servers: 8.138.5.230:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: my-group
+      auto-offset-reset: earliest
+  main:
+    allow-bean-definition-overriding: true
+
+mybatis-plus:
+  configuration:
+    # MyBatis 配置
+    map-underscore-to-camel-case: true
+    # 开启日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    # 全局配置
+    db-config:
+      # 数据库配置
+      id-type: auto

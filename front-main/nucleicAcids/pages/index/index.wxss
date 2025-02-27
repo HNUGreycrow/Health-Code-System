@@ -1,0 +1,57 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  position: absolute;
+  box-sizing: border-box;
+  /* width: ; */
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  /* margin: 10px; */
+  height: 53px;
+  border-radius: 10px;
+  background: rgba(71, 111, 222, 1);
+  margin: 32px;
+  /** 文本1 */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 53px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  vertical-align: center;
+
+}
+
+image {
+  width: 229px;
+  height: 239px;
+  /* margin-top: 20px; */
+  /* margin: 0; */
+  margin-bottom: 30px;
+}
+
+.form {
+  height: 300px;
+}
+
+input {
+  border-bottom: 1px solid rgba(161, 161, 161, 1);
+  width: calc(100vw - 64px);
+  height: 66px;
+
+}
+.placeholder{
+  color: #ccc;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  padding: 32px;
+  position: relative;
+}

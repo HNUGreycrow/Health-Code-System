@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <image src="/images/login.png" alt="" />
+    <view class="form">
+
+      <input type="text" placeholder-class="placeholder" placeholder="请输入身份证号"value="{{id}}" bindinput="nameInput"/>
+      <input value="{{password}}" placeholder-class="placeholder" placeholder="请输入密码" bindinput="passwordInput"/>
+    </view>
+    <view class="button" bind:tap="submit">
+      立即登陆
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,25 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.orange{
+  color: #FF8D1A;
+}
+.red{
+  color: #f60909;
+}
+.green{
+  color: #1b824d;
+}
+.blue{
+  color:#2A82E4
+}
+.yellow{
+  color:#FFD700
+}

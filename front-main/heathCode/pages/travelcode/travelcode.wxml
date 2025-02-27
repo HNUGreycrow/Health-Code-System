@@ -1,0 +1,23 @@
+<view class="wrapper pass">
+  <view class="tittle">通信大数据行程卡</view>
+  <view class="msg">疫情防控，人人有责</view>
+  <view class="card">
+    <view class="line-top"></view>
+    <view class="line-bottom"></view>
+    <view class="line-text">请收下绿色行程卡</view>
+    <view class="id">
+    {{identity_card}}的动态行程卡
+    </view>
+    <view class="time">
+    更新于：{{created_at}}
+    </view>
+    <view class="img" >
+    <image src="/images/travelcode.png" mode=""/>
+    </view>
+    <view class="city">
+    您于14天内到达或途经：
+    <span class="red">{{places[0].place}}</span>
+    </view>
+   </view>
+
+</view>

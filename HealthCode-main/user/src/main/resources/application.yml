@@ -1,0 +1,45 @@
+server:
+  port: 8095
+
+spring:
+  application:
+    name: user
+  datasource:
+    url: jdbc:mysql://8.138.5.230:3306/health_code_user?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: healthcode
+    password: healthcode
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: public
+  redis:
+    host: 8.138.5.230
+    port: 6379
+    password: 344056
+  cache:
+    type: redis
+  kafka:
+    bootstrap-servers: 8.138.5.230:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: my-group
+      auto-offset-reset: earliest
+  wechat:
+    appid: wx3792dd5331fafe8e
+    secret: c0a0b6c72e5620efb43a945b13ed506d
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名
+    # 开启日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    # 全局配置
+    db-config:
+      # 数据库配置
+      id-type: auto

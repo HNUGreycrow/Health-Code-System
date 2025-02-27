@@ -1,0 +1,40 @@
+<view class="container">
+
+  <!-- 选择区域 -->
+  <view class="selection">
+    <picker mode="selector" range="{{districts}}" bindchange="onDistrictChange" class="picker">
+      <view class="picker-content">
+        <view class="picker-item">{{selectedDistrict || "选择行政区"}}</view>
+        <image class="icon" src="/images/icon7.png"></image>
+      </view>
+    </picker>
+    <picker mode="selector" range="{{streets}}" bindchange="onStreetChange" class="picker">
+      <view class="picker-content">
+        <view class="picker-item">{{selectedStreet || "选择街道"}}</view>
+        <image class="icon" src="/images/icon7.png"></image>
+      </view>
+    </picker>
+    <picker mode="selector" range="{{communities}}" bindchange="onCommunityChange" class="picker">
+      <view class="picker-content">
+        <view class="picker-item">{{selectedCommunity || "选择社区"}}</view>
+        <image class="icon" src="/images/icon7.png"></image>
+      </view>
+    </picker>
+  </view>
+
+  <!-- 接种点列表 -->
+  <view class="list">
+    <view class="list-item" wx:for="{{vaccinationCenters}}" wx:key="index">
+      <view class="item-content">
+				<view class="message">
+					<view class="title">{{item.name}}</view>
+					<view class="address">{{item.address}}</view>
+					<view class="details">
+					  <text>接种时间：{{item.appointmentTime}}</text>
+					</view>
+				</view>
+        <view class="reserve-btn" bindtap="onReserve" data-index="{{index}}">预约</view>
+      </view>
+    </view>
+  </view>
+</view>

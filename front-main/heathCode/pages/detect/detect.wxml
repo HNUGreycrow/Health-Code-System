@@ -1,0 +1,16 @@
+<view class="wrapper">
+  <view class="list-item" wx:for="{{list}}">
+  <view class="line">
+  <span class="left">核酸检测结果：</span>
+  <span class="right ,[{{item.statuscolor}}]">{{item.text}}</span>
+  </view>
+  <view class="line">
+  <span class="left">核酸检测机构：</span>
+  <span class="right">{{item.testingOrganization}}</span>
+  </view>
+  <view class="line">
+  <span class="left">核酸采样时间：</span>
+  <span class="right">{{item.createdAt}}</span>
+  </view>
+  </view>
+</view>
