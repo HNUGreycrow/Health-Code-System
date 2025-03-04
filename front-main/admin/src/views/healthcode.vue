@@ -1,8 +1,7 @@
 <template>
   <div>
-    <!-- 转码管理页面 -->
-    <div class="module">
-      <div class="tittle">用户信息列表</div>
+    <Card title="用户信息列表">
+      <!-- 转码管理页面 -->
       <div class="checkbox">
         <el-input v-model="input" placeholder="请输入身份证号" size="small" />
         <el-button type="primary" size="small" @click="search"> 查询</el-button>
@@ -17,7 +16,7 @@
             <template slot-scope="scope">
               <el-tag v-if="scope.row.status == 0" type="success">绿码</el-tag>
               <el-tag v-if="scope.row.status == 1" type="warning">黄码</el-tag>
-              <el-tag v-if="scope.row.healthCodeColor == 2" type="danger">红码</el-tag>
+              <el-tag v-if="scope.row.status == 2" type="danger">红码</el-tag>
             </template>
           </el-table-column>
           <el-table-column prop="address" label="管理" width="300px" align="center">
@@ -29,7 +28,7 @@
           </el-table-column>
         </el-table>
       </div>
-    </div>
+    </Card>
   </div>
 </template>
 

@@ -1,6 +1,5 @@
 <template>
-  <div class="module">
-    <div class="tittle">疫苗接种记录列表</div>
+  <Card title="疫苗接种记录列表">
     <div class="checkbox">
       <el-input v-model="input" placeholder="请输入身份证号" size="small" />
       <el-button type="primary" size="small" @click="search"> 查询</el-button>
@@ -15,7 +14,7 @@
         <el-table-column prop="vaccDate" label="接种日期" align="center" />
       </el-table>
     </div>
-  </div>
+  </Card>
 </template>
 
 <script>

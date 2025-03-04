@@ -1,8 +1,7 @@
 <template>
   <div>
     <!-- 首页页面 -->
-    <div class="module">
-      <div class="tittle">核酸检测统计</div>
+    <Card title="核酸检测统计">
       <div class="checkbox">
         <span>请选择开始时间</span>
         <el-date-picker
@@ -48,10 +47,9 @@
           </div>
         </el-container>
       </div>
-    </div>
+    </Card>
 
-    <div class="module">
-      <div class="tittle">阳性人员信息统计</div>
+    <Card title="阳性人员信息统计">
       <div class="checkbox">
         <span>请选择开始时间</span>
         <el-date-picker
@@ -112,18 +110,7 @@
           </template>
         </el-table-column>
       </el-table>
-      <!-- <el-pagination
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        background
-        :current-page="currentPage4"
-        :page-sizes="[100, 200, 300, 400]"
-        :page-size="100"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="10000"
-      >
-      </el-pagination> -->
-    </div>
+    </Card>
   </div>
 </template>
 
@@ -149,6 +136,10 @@ export default {
       tableData: [],
       tubeType: ['单管', '十人混管', '二十人混管']
     }
+  },
+  created() {
+    this.getDetect()
+    this.getPositive()
   },
   methods: {
     /**
@@ -180,13 +171,6 @@ export default {
      */
     getDetect() {
       // console.log(this.detectTime);
-      if (!this.detectTime.start || !this.detectTime.end) {
-        this.$message({
-          message: '请选择开始时间和截止时间',
-          type: 'info'
-        })
-        return
-      }
       this.detectloading = true
       request({
         url: '/nucleic-acids/getNucleicAcidTestInfo',
@@ -207,13 +191,6 @@ export default {
      */
     getPositive() {
       // console.log(this.detectTime);
-      if (!this.positiveTime.start || !this.positiveTime.end) {
-        this.$message({
-          message: '请选择开始时间和截止时间',
-          type: 'info'
-        })
-        return
-      }
       this.positiveloading = true
       request({
         url: '/nucleic-acids/getPositiveInfo',

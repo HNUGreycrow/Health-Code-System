@@ -1,7 +1,6 @@
 <template>
   <div>
-    <div class="module">
-      <div class="tittle">新建管理人员</div>
+    <Card title="新建管理人员">
       <el-form ref="ruleForm" v-loading="addloading" :model="ruleForm" :rules="rules">
         <div class="form">
           <el-form-item label="" prop="name">
@@ -31,9 +30,9 @@
       </el-form>
 
       <el-button type="primary" size="small" @click="submit('ruleForm')">添加</el-button>
-    </div>
-    <div class="module">
-      <div class="tittle">管理人员列表</div>
+    </Card>
+
+    <Card title="管理人员列表">
       <div v-loading="reverseloading" class="table">
         <el-table :data="tableData" style="width: 100%">
           <el-table-column prop="mid" label="人员ID" align="center" />
@@ -54,19 +53,8 @@
             </template>
           </el-table-column>
         </el-table>
-        <!-- <el-pagination
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-          background
-          :current-page="currentPage4"
-          :page-sizes="[100, 200, 300, 400]"
-          :page-size="100"
-          layout="total, sizes, prev, pager, next, jumper"
-          :total="10000"
-        >
-        </el-pagination> -->
       </div>
-    </div>
+    </Card>
   </div>
 </template>
 

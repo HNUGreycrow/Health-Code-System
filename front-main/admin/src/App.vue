@@ -22,7 +22,7 @@ export default {
 
 }
 
-.module .tittle{
+.module .title{
   opacity: 1;
   /** 文本1 */
   font-size: 18px;

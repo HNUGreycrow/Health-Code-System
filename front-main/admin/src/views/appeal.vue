@@ -1,7 +1,5 @@
 <template>
-  <div class="module">
-    <!-- 健康码申诉页面 -->
-    <div class="tittle">申诉信息列表</div>
+  <Card title="申诉信息列表">
     <div v-loading="reverseloading" class="table">
       <el-table :data="tableData" style="width: 100%">
         <el-table-column prop="appealId" label="申诉信息ID" width="100px" align="center" />
@@ -34,20 +32,8 @@
           </template>
         </el-table-column>
       </el-table>
-      <!-- <el-pagination
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-          background
-          :current-page="currentPage4"
-          :page-sizes="[100, 200, 300, 400]"
-          :page-size="100"
-          layout="total, sizes, prev, pager, next, jumper"
-          :total="10000"
-        >
-        </el-pagination> -->
     </div>
-  </div>
-
+  </Card>
 </template>
 
 <script>

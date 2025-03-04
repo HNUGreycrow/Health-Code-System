@@ -1,8 +1,7 @@
 <template>
   <div>
     <!-- 场所码管理页面 -->
-    <div class="module">
-      <div class="tittle">新建场所码</div>
+    <Card title="新建场所码">
       <el-form ref="ruleForm" :model="ruleForm" :rules="rules">
         <div class="form">
           <el-form-item label="" prop="identity_card">
@@ -79,9 +78,9 @@
         size="small"
         @click="submit('ruleForm')"
       >添加</el-button>
-    </div>
-    <div class="module">
-      <div class="tittle">场所码列表</div>
+    </Card>
+
+    <Card title="场所码列表">
       <div class="table">
         <el-table
           v-loading="reverseloading"
@@ -118,7 +117,7 @@
           </el-table-column>
         </el-table>
       </div>
-    </div>
+    </Card>
   </div>
 </template>
 
