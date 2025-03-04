@@ -23,7 +23,7 @@ public class HealthCode implements Serializable {
     private Long uid;
 
     /**
-     * 健康码颜色，0：红色，1：黄色，2：绿色
+     * 健康码颜色，0：绿色，1：黄色，2：红色
      */
     @TableField(value = "color")
     private Integer color;

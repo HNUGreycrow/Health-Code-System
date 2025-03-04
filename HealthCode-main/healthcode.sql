@@ -61,7 +61,7 @@ USE health_code_health_code;
 -- 健康码表
 CREATE TABLE health_code (
     uid BIGINT PRIMARY KEY COMMENT '用户唯一标识',
-    color INT NOT NULL COMMENT '健康码颜色，0：红色，1：黄色，2：绿色',
+    color INT NOT NULL COMMENT '健康码颜色，0：绿色，1：黄色，2：红色',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '记录创建时间',
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '记录更新时间'
 );
