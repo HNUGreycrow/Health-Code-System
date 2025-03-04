@@ -143,10 +143,16 @@ public class NucleicAcidsController {
         try {
             // 从 JWT 令牌中提取用户 ID
             JWTUtil.extractID(token);
-            // 将开始日期字符串转换为 Date 对象
-            Date startDate = dateFormat.parse(start_time);
-            // 将结束日期字符串转换为 Date 对象
-            Date endDate = dateFormat.parse(end_time);
+            Date startDate = null;
+            Date endDate = null;
+            if (start_time != null && !start_time.isEmpty()) {
+                // 将开始日期字符串转换为 Date 对象
+                startDate = dateFormat.parse(start_time);
+            }
+            if (end_time != null && !end_time.isEmpty()) {
+                // 将结束日期字符串转换为 Date 对象
+                endDate = dateFormat.parse(end_time);
+            }
             // 调用服务层方法获取指定时间范围内的核酸检测信息
             return Result.success(nucleicAcidsService.getNucleicAcidTestInfoByTime(startDate, endDate));
         } catch (ParseException e) {
@@ -172,10 +178,16 @@ public class NucleicAcidsController {
         try {
             // 从 JWT 令牌中提取用户 ID
             JWTUtil.extractID(token);
-            // 将开始日期字符串转换为 Date 对象
-            Date startDate = dateFormat.parse(start_time);
-            // 将结束日期字符串转换为 Date 对象
-            Date endDate = dateFormat.parse(end_time);
+            Date startDate = null;
+            Date endDate = null;
+            if (start_time != null && !start_time.isEmpty()) {
+                // 将开始日期字符串转换为 Date 对象
+                startDate = dateFormat.parse(start_time);
+            }
+            if (end_time != null && !end_time.isEmpty()) {
+                // 将结束日期字符串转换为 Date 对象
+                endDate = dateFormat.parse(end_time);
+            }
             // 调用服务层方法获取指定时间范围内的阳性核酸检测信息
             return Result.success(nucleicAcidsService.getPositiveInfoByTime(startDate, endDate));
         } catch (ParseException e) {
