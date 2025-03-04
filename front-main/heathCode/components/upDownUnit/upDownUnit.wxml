@@ -1,0 +1,6 @@
+<view class="icon" bind:tap="goto" data-page="{{page}}">
+    <view class="imgbg">
+      <image src="{{image_path}}" mode=""/>
+    </view>
+    <text>{{text}}</text>
+</view>

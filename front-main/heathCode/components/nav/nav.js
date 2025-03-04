@@ -50,11 +50,6 @@ Component({
 				}
       })
     },
-    goto(event){
-      const page = event.currentTarget.dataset.page;
-      wx.navigateTo({
-        url: '/pages/'+page+'/'+page,
-      })
-    },
+    
   }
 })

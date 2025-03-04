@@ -1,16 +1,9 @@
-/* components/nav.wxss */
-.icons{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 20px;
-}
-.nav{
+/* components/upDownUnit.wxss */
+.icon{
   align-items: center;
   text-align: center;
-  width: 30%;
 }
-.nav .imgbg{
+.icon .imgbg{
   background-color: #C7E4FE;
   width:67px;
   height:67px;
@@ -20,11 +13,11 @@
   justify-content: center;
   align-items: center;
 }
-.nav .imgbg image{
+.icon .imgbg image{
   width: 42px;
   height: 42px;
 }
-.nav text{
+.icon text{
   /** 文本1 */
 font-size: 14px;
 font-weight: 400;

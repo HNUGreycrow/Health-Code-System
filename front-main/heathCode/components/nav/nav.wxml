@@ -1,0 +1,8 @@
+<view class="icons">
+	  <upDownUnit class="unit" page="travelcode" image_path="/images/icon1.png" text="行程码展示"></upDownUnit>
+		<upDownUnit class="unit" page="detect" image_path="/images/icon2.png" text="查看核酸结果"></upDownUnit>
+		<upDownUnit class="unit" page="address" image_path="/images/icon3.png" text="查看核酸点"></upDownUnit>
+		<upDownUnit class="unit" page="vaccine" image_path="/images/icon4.png" text="预约疫苗接种"></upDownUnit>
+		<upDownUnit class="unit" page="venuecode" image_path="/images/icon5.png" text="扫描场所码"></upDownUnit>
+		<upDownUnit class="unit" page="question" image_path="/images/icon6.png" text="我的疑问"></upDownUnit>
+  </view>

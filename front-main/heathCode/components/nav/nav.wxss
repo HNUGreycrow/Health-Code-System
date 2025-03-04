@@ -1,0 +1,10 @@
+/* components/nav.wxss */
+.icons{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.unit{
+  width: 30%;
+}

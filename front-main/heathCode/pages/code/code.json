@@ -1,8 +1,8 @@
 
 {
   "usingComponents": {
-    "box":"../../components/box",
-    "nav":"../../components/nav"
+    "box":"../../components/box/box",
+    "nav":"../../components/nav/nav"
   },
   "navigationBarBackgroundColor": "#476FDE",
   "navigationBarTextStyle": "white"
